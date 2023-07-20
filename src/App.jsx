@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { calculateTotals, getCartItems } from './features/cart/cartSlice';
 import { useEffect } from 'react';
 import Modal from './components/Modal';
+import Loader from './loader/loader';
 function App() {
   const { cartItems, isLoading } = useSelector((store) => store.cart);
   const { isOpen } = useSelector((store) => store.modal);
@@ -20,8 +21,8 @@ function App() {
 
   if (isLoading) {
     return (
-      <div className='loading'>
-        <h1>Loading...</h1>
+      <div>
+       <Loader/>
       </div>
     );
   }
