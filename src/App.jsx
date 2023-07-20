@@ -1,5 +1,5 @@
 import Navbar from './components/navbar';
-import CartContainer from './components/CArtContainer';
+import CartContainer from './components/CartContainer';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { calculateTotals, getCartItems } from './features/cart/cartSlice';
